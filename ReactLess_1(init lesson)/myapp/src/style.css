@@ -1,0 +1,11 @@
+.post{
+    margin: 5px;
+    padding: 15px;
+    background-color: bisque;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+.text {
+    color: blue;
+}
