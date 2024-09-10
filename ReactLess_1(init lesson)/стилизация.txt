@@ -10,3 +10,13 @@ import './style.css'
 <div className="post">
    <h1>...</р1>
 </div>
+
+-----------------------------------------
+В качестве занчение атрибута style задается js ОБЪЕКТ используя jsx 
+<p style={{color: 'red', fontSize: '25px'}} >text</p>
+
+Для удобвства объект можно вынести как отдельное выражаение внутри компонента
+
+let styleObj = {color: 'red', fontSize: '25px'}
+
+<p style={styleObj} >text</p>

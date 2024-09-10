@@ -2,9 +2,14 @@
 
 
 function Post(){
+
+  let styleObj = {
+    color: (false) ? 'red' : 'blue', 
+    fontSize: '35px'
+  }
     return(
       <div className="post">
-        <h1>Post</h1>
+        <h1 style={styleObj}>Post</h1>
         <p>Text</p>
       </div>
     )
@@ -12,3 +17,4 @@ function Post(){
   
 
 export default Post
+

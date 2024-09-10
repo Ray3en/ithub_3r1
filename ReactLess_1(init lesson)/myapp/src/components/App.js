@@ -2,9 +2,9 @@ import Post from "./Post"
 import ProductItem from "./ProductItem"
 
 function App(){
-    let string = 'First post!'
-    let number = Math.random()
-    let pClass = 'text'
+    // let string = 'First post!'
+    // let number = Math.random()
+    // let pClass = 'text'
 
     // Задание
     // Создайте компонент ProductItem. 
@@ -19,9 +19,7 @@ function App(){
     return(
       <div>
         <ProductItem/>
-
-        <p className={pClass}>{string}</p>
-        <p>{Math.round(number * 10)} + 30</p>
+        {/* <Post/> */}
       </div>
     )
   }
