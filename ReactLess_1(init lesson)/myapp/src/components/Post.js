@@ -1,16 +1,18 @@
 
 
+function Post(props){
 
-function Post(){
+const {title, text, color} = props
 
   let styleObj = {
-    color: (false) ? 'red' : 'blue', 
+    color, 
     fontSize: '35px'
   }
+  
     return(
       <div className="post">
-        <h1 style={styleObj}>Post</h1>
-        <p>Text</p>
+        <h1 style={styleObj}>{title}</h1>
+        <p>{text}</p>
       </div>
     )
   }
