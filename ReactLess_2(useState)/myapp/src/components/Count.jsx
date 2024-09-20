@@ -26,9 +26,13 @@ function Count() {
   // Задание 2
   // Создайте Reset дополнительную кнопку которая будет обнулять значение счетчика
 
+  // Задание 3
   // Под кнопками реализуйте параграф который в зависомсти от состояния будет хранить текст: 
   // Если состояние будет больше 5, тогда оставить текст "count больше 5"
   // Иначе оставить текст "count меньше или равен 5"
+
+  // Задание 4
+  // Создайте дополнительную кнопку, которая вызовет модальное окно prompt и сохранит результат введеных данных в состояние count
 
   function increment(){
     setCount(count + 1)
@@ -40,12 +44,21 @@ function Count() {
     }
   }
 
+  function promptedValue(){
+    let answer = +prompt()
+    if (!isNaN(answer)){
+      setCount(answer)
+    }
+  }
+
     return (
       <div>
+        <h2>Count</h2>
         <p>{count}</p>
         <button onClick={increment}>increment</button>
         <button onClick={decrement}>decrement</button>
         <button onClick={() => setCount(0)}>reset</button>
+        <button onClick={promptedValue}>Prompt</button>
         <p>{count > 5 ? 'count больше 5' : 'count меньше или равен 5'}</p>
       </div>
     );
