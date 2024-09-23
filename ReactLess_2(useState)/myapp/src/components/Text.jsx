@@ -26,6 +26,19 @@ function Text(){
         setText(text.toLowerCase())
     }
 
+    function reverseText(){
+        // Решение 1
+        // let reversedText = ''
+        // for (let i = text.length - 1; i >= 0; i--){
+        //     reversedText += text[i]
+        // }
+        // setText(reversedText)
+
+        // Решение 2
+        setText(text.split('').reverse().join(''))
+    }
+
+
     return(
         <div>
             <h2>Text</h2>
@@ -34,6 +47,7 @@ function Text(){
                 <button onClick={toUpperText}>Upper Text</button>
                 <button onClick={toLowerText}>Lower Text</button>
                 <button onClick={() => setText(prompt())}>Text by prompt</button>
+                <button onClick={reverseText}>Reversed text</button>
             </div>
         </div>
     )

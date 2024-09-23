@@ -1,5 +1,6 @@
 import Count from "./components/Count";
 import Text from "./components/Text";
+import Users from "./components/Users";
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div>
       <Count/>
       <Text/>
+      <Users/>
     </div>
   );
 }
