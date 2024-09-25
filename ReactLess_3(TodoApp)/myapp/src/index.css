@@ -4,3 +4,18 @@
     justify-content: center;
     margin: 20px;
 }
+
+.todo_card{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px 170px;
+
+    outline: 2px solid black;
+    box-shadow: 5px 5px 10px black;
+}
+
+.input_elem > input {
+    outline: 2px solid black;
+    box-shadow: 5px 5px 10px black;  
+}
