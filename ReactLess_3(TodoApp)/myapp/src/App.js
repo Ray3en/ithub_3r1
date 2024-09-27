@@ -17,17 +17,39 @@ function App() {
     setTodos(filteredTodos)
   }
 
-  // ДЗ
-  // Релизуте функцию changeTodos(id), которая в качестве аргумента будет получать id задачи
-  // Функция должна изменить сво-во completed на инвертирование значение булевого типа у той задачи, чей id равен занчение аргумента
-  // Функция должна вызываться по событию onClick внутри TodoItem
+  function changeTodos(id){
+    let newTodos = todos.map(todo => {
+      if (todo.id === id){
+        todo.completed = !todo.completed
+      }
+      return todo
+    })
+    setTodos(newTodos)
+  }
+
+
+  function addTodo(title){
+    let newTodo = {
+      id: Date.now(),
+      title,
+      completed: false
+    }
+    setTodos([...todos, newTodo])
+  }
 
   return (
     <div>
-        <AddForm/>
-        <TodoList todos={todos} deleteTodoByid={deleteTodoByid}/>
+        <AddForm addTodo={addTodo}/>
+        <TodoList 
+          todos={todos} 
+          changeTodos={changeTodos} 
+          deleteTodoByid={deleteTodoByid}
+        />
     </div>
   );
 }
 
 export default App;
+
+
+

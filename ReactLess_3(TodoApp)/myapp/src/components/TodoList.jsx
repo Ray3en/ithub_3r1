@@ -2,7 +2,7 @@ import TodoItem from "./TodoItem"
 
 
 function TodoList(props){
-    const {todos, deleteTodoByid} = props
+    const {todos, deleteTodoByid, changeTodos} = props
     return (
         <div>
            {todos.map(elem => <TodoItem 
@@ -11,6 +11,7 @@ function TodoList(props){
                                 title={elem.title}
                                 completed={elem.completed}
                                 deleteTodoByid={deleteTodoByid}
+                                changeTodos={changeTodos}
                             />)}
         </div>
     )
