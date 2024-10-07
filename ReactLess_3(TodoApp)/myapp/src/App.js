@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddForm from "./components/AddForm";
 import TodoList from "./components/TodoList";
 
@@ -10,7 +10,9 @@ function App() {
     {id: 3, title: 'Наконец изучить React', completed: true}
   ]
 
-  const [todos, setTodos] = useState(start_todos)
+  let local_data = JSON.parse(localStorage.getItem('todos'))
+
+  const [todos, setTodos] = useState(local_data || start_todos)
 
   function deleteTodoByid(id){
     let filteredTodos = todos.filter(elem => elem.id !== id)
@@ -36,6 +38,20 @@ function App() {
     }
     setTodos([...todos, newTodo])
   }
+  // 2-ая задача
+  // Чтение данных из LS и изменение состояния
+  // useEffect(() => {
+  //   let data = JSON.parse(localStorage.getItem('todos'))
+  //   setTodos(data)
+  // }, [])  
+
+  // 1-ая задача 
+  // Непрерывное сохранение состояние в LS (localStorage)
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
+
 
   return (
     <div>
