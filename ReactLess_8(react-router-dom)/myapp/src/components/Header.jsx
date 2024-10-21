@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -6,9 +7,10 @@ function Header() {
       <div className="header">
           <div className="logo"></div>
           <ul className="menu_wrapper">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contacts</li>
+            <Link to={'/'}><li>Home</li></Link>
+            <Link to={'/about'}><li>About</li></Link>
+            <Link to={'/contacts'}><li>Contacts</li></Link>
+            <Link to={'/products'}><li>Products</li></Link>
           </ul>
       </div>
     );
