@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import ProductListPage from "./pages/ProductListPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route path="/about" element={<AboutPage/>}/>
             <Route path="/contacts" element={<ContactsPage/>}/>
             <Route path="/products" element={<ProductListPage/>}/>
+            <Route path="/products/:id" element={<ProductPage/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
           </Routes>
         </Router>
