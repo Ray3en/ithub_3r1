@@ -8,7 +8,7 @@ function ProductListPage(){
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
+        fetch('https://api.escuelajs.co/api/v1/products/?offset=0&limit=40')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

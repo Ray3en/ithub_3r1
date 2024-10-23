@@ -33,3 +33,11 @@
     background-color: gainsboro;
     border-radius: 16px;
 }
+
+a {
+    text-decoration: none;
+}
+
+a.active {
+    text-decoration: underline
+}
