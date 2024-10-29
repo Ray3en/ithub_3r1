@@ -9,8 +9,6 @@ import ProductPage from "./pages/ProductPage";
 
 function App() {
 
-  // useLocation - возвращает объект с инофрмацией текущей локации
-  // Может использоваться для useEffect в качестве зависимости или условий для условного оператора
   const location = useLocation()
   console.log(location)
 

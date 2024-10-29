@@ -1,0 +1,28 @@
+.button_elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 14px 24px;
+    margin: 8px 0px;
+    border-radius: 50px;
+
+    color: #1a1a1a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    cursor: pointer;
+}
+
+.yellow{
+    background-color: #FFE44D;
+    border: none;
+}
+
+.white {
+    background-color: white;
+    border: 0.5 solid #CFD8DC;
+}
+
