@@ -15,6 +15,8 @@
     padding-top: 100px;
     pointer-events: none;
     opacity: 0;
+    transition: 400ms;
+
 }
 
 .modal.active{
@@ -25,5 +27,24 @@
 .modal_content {
     padding: 20px 32px;
     border-radius: 20px;
+    width: 350px;
     background-color: white;
+    transition: 400ms;
+    transform: scale(0.5);
+    position: relative;
+}
+
+.modal_content.active {
+    transform: scale(1);
+    pointer-events: all;
+
+}
+
+.x_mark {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
 }
