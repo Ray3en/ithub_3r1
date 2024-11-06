@@ -9,7 +9,6 @@
 }
 
 .info_text{
-    width: 350px;
     color: gray;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -21,5 +20,12 @@
 .form_area{
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
+    /* align-items: flex-start; */
+}
+
+.btn_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
