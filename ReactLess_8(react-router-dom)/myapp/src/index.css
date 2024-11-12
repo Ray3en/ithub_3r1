@@ -28,10 +28,13 @@
 .content{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin: 15px;
     padding: 25px 40px;
     background-color: gainsboro;
     border-radius: 16px;
+    align-items: center;
+    gap: 15px;
 }
 
 a {

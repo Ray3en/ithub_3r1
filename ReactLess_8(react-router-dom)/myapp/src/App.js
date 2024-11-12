@@ -6,6 +6,7 @@ import {Routes, Route, useLocation} from 'react-router-dom'
 import ProductListPage from "./pages/ProductListPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductPage from "./pages/ProductPage";
+import WorkDetailPage from "./pages/WordDetailPage";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contacts" element={<ContactsPage/>}/>
           <Route path="/products" element={<ProductListPage/>}/>
           <Route path="/products/:id" element={<ProductPage/>}/>
+          <Route path="/work/:id" element={<WorkDetailPage/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
     </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import workData from '../data/work_data.json'
 
 
 
@@ -24,6 +25,17 @@ function ProductListPage(){
                         </li>
                     </Link>
                 )}
+            </ol>
+            <h2>Works</h2>
+            <ol>
+                {workData.map(elem => (
+                    <Link key={elem.id} to={'/work/'+elem.id}>
+                        <li>
+                            {elem.title}
+                        </li>
+                    </Link>
+                ))}
+                
             </ol>
         </div>
     )
