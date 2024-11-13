@@ -1,12 +1,12 @@
-import { createStore } from 'redux'
+import { combineReducers, createStore } from 'redux'
+import { countReducer } from './countReducer'
+import { stringReducer } from './stringReducer'
 
-const defaultState = {
-    count: 0,
-}
+const rootReducer = combineReducers({
+    count: countReducer,
+    string: stringReducer
+})
 
-function reducer(state = defaultState, action){
-    return state
-}
+export const store = createStore(rootReducer)
 
 
-export const store = createStore(reducer)
