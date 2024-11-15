@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
+import { incrementAction, resetAction } from "../store/countReducer"
 
 
 
@@ -19,14 +20,14 @@ export function Count(){
             <h1>Count</h1>
             <p>{count}</p>
             <div>
-                <button onClick={() => disptach({type: "INCR_BY_PAYLOAD", payload: 1})}>Increment</button>
-                <button onClick={() => disptach({type: "INCR_BY_PAYLOAD", payload: -1})}>Decrement</button>
-                <button onClick={() => disptach({type: "INCR_BY_PAYLOAD", payload: 100})}>Increment + 100</button>
-                <button onClick={() => disptach({type: "INCR_BY_PAYLOAD", payload: -100})}>Decrement - 100</button>
+                <button onClick={() => disptach(incrementAction(1))}>Increment</button>
+                <button onClick={() => disptach(incrementAction(-1))}>Decrement</button>
+                <button onClick={() => disptach(incrementAction(100))}>Increment + 100</button>
+                <button onClick={() => disptach(incrementAction(-100))}>Decrement - 100</button>
             </div>
             <div>
-                <button onClick={() => disptach({type: "RESET"})}>Reset</button>
-                <button onClick={() => disptach({type: "INCR_BY_PAYLOAD", payload: +prompt()})}>Increment by prompt</button>
+                <button onClick={() => disptach(resetAction())}>Reset</button>
+                <button onClick={() => disptach(incrementAction(+prompt()))}>Increment by prompt</button>
             </div>
         </div>
     )
