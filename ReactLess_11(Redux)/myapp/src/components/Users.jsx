@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from "react-redux"
 import { changeYearAction, deleteByIdAction, removeLastUserAction } from "../store/usersReducer"
-import { fetchUsers } from "../asyncActions/users"
+import { fetchUserById, fetchUsers } from "../asyncActions/users"
 import { useEffect } from "react"
 
 
 export function Users(){
 
     const users = useSelector(store => store.users.data)
+    const userInfo = useSelector(store => store.users.user)
 
     const dispatch = useDispatch()
 
@@ -14,6 +15,13 @@ export function Users(){
     // useEffect(() => {
     //     dispatch(fetchUsers())
     // }, [])
+
+    // Реализуйте кнопку ниже, которая вызовет модального окно prompt и передаст указанное значение 
+    // в ваш новый сетевой запрос. Запрос должен получить данные указанного пользователя и сформировать их в 
+    // состоянии users
+
+    // users => {}
+    // users => {firstName: 'Steven', age: 123}
 
     return(
         <div>
@@ -32,6 +40,13 @@ export function Users(){
                 <button onClick={() => dispatch(removeLastUserAction())}>Remove last user</button>
                 <button onClick={() => dispatch(changeYearAction())}>Change year</button>
                 <button onClick={() => dispatch(fetchUsers())}>Get async Users</button>
+            </div>
+            <h1>User info</h1>
+            <button onClick={() => dispatch(fetchUserById(prompt()))}>Get info</button>
+            <div>
+                <img src={userInfo.image}/>
+                <p>{userInfo.firstName}</p>
+                <p>{userInfo.age}</p>
             </div>
         </div>
     )

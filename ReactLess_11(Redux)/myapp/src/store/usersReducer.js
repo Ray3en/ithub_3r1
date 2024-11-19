@@ -4,13 +4,17 @@ const defaultState = {
         {id: 101, firstName: 'Alex', age: 20},
         {id: 102, firstName: 'Steven', age: 25},
         {id: 103, firstName: 'John', age: 30},
-    ]
+    ],
+    user: {}
 }
+
+// {...state, user: ...}
 
 const REMOVE_LAST_USER = 'REMOVE_LAST_USER'
 const CHANGE_YEAR = 'CHANGE_YEAR'
 const DELETE_BY_ID = 'DELETE_BY_ID'
 const GET_USER_LIST = 'GET_USER_LIST' 
+const GET_USER_INFO = 'GET_USER_INFO'
 
 export function usersReducer(state = defaultState, action){
     switch (action.type){
@@ -25,12 +29,15 @@ export function usersReducer(state = defaultState, action){
             return {...state, data: deletedUsers}
         case GET_USER_LIST:
             return {...state, data: action.payload}
+        case GET_USER_INFO:
+            return {...state, user: action.payload}
+        default:
+            return state
     }
-    return state
 }
 
 export const removeLastUserAction = () => ({type: REMOVE_LAST_USER})
 export const changeYearAction = () => ({type: CHANGE_YEAR})
 export const deleteByIdAction = (payload) => ({type: DELETE_BY_ID, payload})
 export const getUserListAction = (payload) => ({type: GET_USER_LIST, payload})
- 
+export const getUserInfoAction = (payload) => ({type: GET_USER_INFO, payload})
