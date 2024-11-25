@@ -8,8 +8,6 @@ const defaultState = {
     user: {}
 }
 
-// {...state, user: ...}
-
 const REMOVE_LAST_USER = 'REMOVE_LAST_USER'
 const CHANGE_YEAR = 'CHANGE_YEAR'
 const DELETE_BY_ID = 'DELETE_BY_ID'
